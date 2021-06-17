@@ -34,20 +34,23 @@ void TicTacToe(string list[])
 		string x[9] = { "1","2","3","4","5","6","7","8","9" };
 		int coordinate;
 		TicTacToe(x);
-
 		while (true)
 		{
-			cin >> coordinate;
-			if (coordinate >= 10 || coordinate <= 0)
-			{
-				cout << "沒有此位置" << endl;
-			}
+		while (true)
+				{
+					cin >> coordinate;
+					if (coordinate >= 10 || coordinate <= 0)
+					{
+						cout << "沒有此位置" << endl;
+					}
 
-			else
-			{
-				x[coordinate - 1] = "X";
-				break;
-			}
+					else
+					{
+						x[coordinate - 1] = "X";
+						break;
+					}
+				}
+			TicTacToe(x);
 		}
-		TicTacToe(x);
+		
 	}
